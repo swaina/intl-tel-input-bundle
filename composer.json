@@ -1,0 +1,29 @@
+{
+    "name": "AlaaKanaan/intl-tel-input-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle integrate International Telephone Input into symfony2 form",
+    "keywords": ["formtype", "Telephone Input", "symfony", "bundle"],
+    "homepage": "https://github.com/AlaaKanaan/intl-tel-input-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alaa Kanaan",
+            "homepage": "https://github.com/AlaaKanaan"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://github.com/AlaaKanaan/intl-tel-input-bundle"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.4"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "AK\\IntlTelBundle": ""
+        }
+    },
+    "target-dir": "AK/IntlTelBundle"
+}

@@ -1,0 +1,5 @@
+services:
+    ak_IntlTel.form.type.tele:
+        class: AK\IntlTelBundle\Form\Type\TeleType
+        tags:
+            - { name: form.type, alias: tele }

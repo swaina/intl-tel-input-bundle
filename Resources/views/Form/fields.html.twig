@@ -1,0 +1,33 @@
+{# src/Acme/DemoBundle/Resources/views/Form/fields.html.twig #}
+{% block tele_widget %}
+    {% spaceless %}
+
+{% stylesheets 'bundles/akintltel/css/intlTelInput.css' filter="cssrewrite"  %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+
+
+
+  {{ form_widget(form,{'type':'tel'}) }}
+
+    {% javascripts 'bundles/akintltel/js/intlTelInput.min.js' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+   {% endjavascripts %}
+
+
+<script type="text/javascript" >
+    $(document).ready(function() {
+        $("#{{form.vars.id}}").intlTelInput();
+
+
+        {%if form.vars.attr.user_country is defined %}
+        $("#{{form.vars.id}}").intlTelInput("selectCountry", "{{form.vars.attr.user_country}}");
+
+        {%elseif app.session.get('user_country') is not empty %}
+        $("#{{form.vars.id}}").intlTelInput("selectCountry", "{{app.session.get('user_country')}}");
+        {%endif%}
+    });
+</script>
+
+    {% endspaceless %}
+{% endblock %}
