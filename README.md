@@ -32,4 +32,4 @@ Now tell composer to download the bundle by running the command:
 $ php composer.phar update AK/intl-tel-input-bundle
 ```
 
-Composer will install the bundle and Kint in your project's `vendor` directory.
+Composer will install the bundle in your project's `vendor` directory.
