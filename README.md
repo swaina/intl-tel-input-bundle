@@ -1,9 +1,9 @@
 intl-tel-input-bundle
 =====================
 
-This bundle integrate [International Telephone Input](https://github.com/Bluefieldscom/intl-tel-input). into symfony2
+This bundle integrate [International Telephone Input](https://github.com/Bluefieldscom/intl-tel-input). into symfony2 as a form type.
 
-![alt tag](https://raw.github.com/Bluefieldscom/intl-tel-input/master/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/AlaaKanaan/intl-tel-input-bundle/master/screenshot.png)
 
 
 ## Demo and Examples
