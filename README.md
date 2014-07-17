@@ -8,3 +8,28 @@ This bundle integrate [International Telephone Input](https://github.com/Bluefie
 
 ## Demo and Examples
 You can view a live demo and some examples of how to use the various options here: http://jackocnr.com/intl-tel-input.html.
+
+
+
+Installation
+============
+
+## Using Composer
+
+Add the intl-tel-input-bundle in your `composer.json` file:
+
+```js
+{
+    "require": {
+        "AK/intl-tel-input-bundle": "dev-master"
+    }
+}
+```
+
+Now tell composer to download the bundle by running the command:
+
+``` bash
+$ php composer.phar update AK/intl-tel-input-bundle
+```
+
+Composer will install the bundle and Kint in your project's `vendor` directory.

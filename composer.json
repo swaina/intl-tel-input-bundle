@@ -1,5 +1,5 @@
 {
-    "name": "AlaaKanaan/intl-tel-input-bundle",
+    "name": "AK/intl-tel-input-bundle",
     "type": "symfony-bundle",
     "description": "This bundle integrate International Telephone Input into symfony2 form",
     "keywords": ["formtype", "Telephone Input", "symfony", "bundle"],
