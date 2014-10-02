@@ -1,5 +1,5 @@
 {
-    "name": "SpikeO/intl-tel-input-bundle",
+    "name": "spikeo/intl-tel-input-bundle",
     "type": "symfony-bundle",
     "description": "This bundle integrate International Telephone Input into symfony2 form",
     "keywords": ["formtype", "Telephone Input", "symfony", "bundle"],
@@ -11,7 +11,7 @@
             "homepage": "https://github.com/SpikeO"
         },
         {
-            "name": "Symfony Community",
+            "name": "intl-tel-input-bundle",
             "homepage": "https://github.com/SpikeO/intl-tel-input-bundle"
         }
     ],
