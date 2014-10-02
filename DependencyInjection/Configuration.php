@@ -1,6 +1,6 @@
 <?php
 
-namespace Webit\IntlTelBundle\DependencyInjection;
+namespace SpikeO\IntlTelBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
