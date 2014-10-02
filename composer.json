@@ -22,7 +22,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
-            "AK\\IntlTelBundle": ""
+            "Spike\\IntlTelBundle": ""
         }
     },
     "target-dir": "SpikeO/IntlTelBundle"

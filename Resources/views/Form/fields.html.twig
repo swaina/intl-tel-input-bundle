@@ -1,8 +1,7 @@
-{# src/Acme/DemoBundle/Resources/views/Form/fields.html.twig #}
 {% block tele_widget %}
     {% spaceless %}
 
-{% stylesheets 'bundles/akintltel/css/intlTelInput.css' filter="cssrewrite"  %}
+{% stylesheets 'bundles/spikeintltel/css/intlTelInput.css' filter="cssrewrite"  %}
 <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
 {% endstylesheets %}
 
@@ -10,7 +9,7 @@
 
   {{ form_widget(form,{'type':'tel'}) }}
 
-    {% javascripts 'bundles/akintltel/js/intlTelInput.min.js' %}
+    {% javascripts 'bundles/spikeintltel/js/intlTelInput.min.js' %}
         <script src="{{ asset_url }}" type="text/javascript"></script>
    {% endjavascripts %}
 
