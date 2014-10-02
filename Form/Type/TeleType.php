@@ -7,7 +7,7 @@
  *
  */
 
-namespace Spike\IntlTelBundle\Form\Type;
+namespace SpikeO\IntlTelBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
