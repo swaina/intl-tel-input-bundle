@@ -1,5 +1,5 @@
 {
-    "name": "AK/intl-tel-input-bundle",
+    "name": "SpikeO/intl-tel-input-bundle",
     "type": "symfony-bundle",
     "description": "This bundle integrate International Telephone Input into symfony2 form",
     "keywords": ["formtype", "Telephone Input", "symfony", "bundle"],
@@ -25,5 +25,5 @@
             "AK\\IntlTelBundle": ""
         }
     },
-    "target-dir": "AK/IntlTelBundle"
+    "target-dir": "SpikeO/IntlTelBundle"
 }
