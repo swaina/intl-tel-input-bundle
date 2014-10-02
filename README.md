@@ -3,7 +3,7 @@ intl-tel-input-bundle
 
 This bundle integrate [International Telephone Input](https://github.com/Bluefieldscom/intl-tel-input). into symfony2 as a form type.
 
-![alt tag](https://raw.githubusercontent.com/AlaaKanaan/intl-tel-input-bundle/master/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/SpikeO/intl-tel-input-bundle/master/screenshot.png)
 
 
 ## Demo and Examples
@@ -21,7 +21,7 @@ Add the intl-tel-input-bundle in your `composer.json` file:
 ```js
 {
     "require": {
-        "AK/intl-tel-input-bundle": "dev-master"
+        "SpikeO/intl-tel-input-bundle": "dev-master"
     }
 }
 ```
@@ -29,7 +29,7 @@ Add the intl-tel-input-bundle in your `composer.json` file:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update AK/intl-tel-input-bundle
+$ php composer.phar update SpikeO/intl-tel-input-bundle
 ```
 
 Composer will install the bundle in your project's `vendor` directory.
