@@ -1,6 +1,6 @@
 <?php
 
-namespace Webit\IntlTelBundle\DependencyInjection;
+namespace SpikeO\IntlTelBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
