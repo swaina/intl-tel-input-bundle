@@ -1,5 +1,5 @@
 services:
-    spikeo_IntlTel.form.type.tele:
+    swaina_IntlTel.form.type.tele:
         class: Swaina\IntlTelBundle\Form\Type\TeleType
         tags:
             - { name: form.type, alias: tele }

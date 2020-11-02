@@ -1,7 +1,7 @@
 twig:
     form:
         resources:
-            - 'SpikeOIntlTelBundle:Form:fields.html.twig'
+            - 'SwainaIntlTelBundle:Form:fields.html.twig'
 # Assetic Configuration
 assetic:
-    bundles:        ['SpikeOIntlTelBundle']
+    bundles:        ['SwainaIntlTelBundle']

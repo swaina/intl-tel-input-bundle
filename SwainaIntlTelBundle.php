@@ -1,6 +1,6 @@
 <?php
 
-namespace Swaina\IntlTelBundle;
+namespace swaina\IntlTelBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
