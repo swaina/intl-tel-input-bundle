@@ -1,9 +1,8 @@
 <?php
 
-namespace Swaina\IntlTelBundle
+namespace Swaina\IntlTelBundle;
 /**
  * Created by PhpStorm.
- * User: wendydagnol
  * Date: 02/11/2020
  * Time: 01:27
  */
