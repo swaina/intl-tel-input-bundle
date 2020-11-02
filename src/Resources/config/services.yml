@@ -1,5 +1,5 @@
 services:
-    swaina_IntlTel.form.type.tele:
-        class: Swaina\IntlTelBundle\Form\Type\TeleType
+    intltel.form.type.tele:
+        class: IntlTelInputBundle\IntlTelInputBundle\Form\Type\TeleType
         tags:
             - { name: form.type, alias: tele }

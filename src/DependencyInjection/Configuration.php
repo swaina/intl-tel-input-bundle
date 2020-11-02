@@ -1,6 +1,6 @@
 <?php
 
-namespace IntlTelBundle\DependencyInjection;
+namespace IntlTelInputBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('swaina_intl_tel');
+        $treeBuilder = new TreeBuilder('intl_tel_input');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

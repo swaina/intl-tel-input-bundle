@@ -1,12 +1,12 @@
 <?php
 
 declare(strict_types=1);
-namespace IntlTelBundle;
+namespace IntlTelInputBundle;
 
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SwainaIntlTelBundle extends Bundle
+class IntlTelInputBundle extends Bundle
 {
 
 }

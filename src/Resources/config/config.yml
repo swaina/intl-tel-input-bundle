@@ -1,7 +1,7 @@
 twig:
     form:
         resources:
-            - 'SwainaIntlTelBundle:Form:fields.html.twig'
+            - 'IntlTelInputBundle:Form:fields.html.twig'
 # Assetic Configuration
 assetic:
-    bundles:        ['SwainaIntlTelBundle']
+    bundles:        ['IntlTelInputBundle']

@@ -1,6 +1,6 @@
 <?php
 
-namespace IntlTelBundle\DependencyInjection;
+namespace IntlTelInputBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
