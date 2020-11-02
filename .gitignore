@@ -3,3 +3,4 @@
 /Tests/logs
 /php-cs-fixer.phar
 *.idea
+.idea
