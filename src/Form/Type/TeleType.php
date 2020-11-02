@@ -2,7 +2,7 @@
 
 
 
-namespace Swaina\IntlTelBundle\Form\Type;
+namespace IntlTelBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;

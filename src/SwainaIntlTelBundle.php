@@ -1,11 +1,8 @@
 <?php
 
-namespace Swaina\IntlTelBundle;
-/**
- * Created by PhpStorm.
- * Date: 02/11/2020
- * Time: 01:27
- */
+declare(strict_types=1);
+namespace IntlTelBundle;
+
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

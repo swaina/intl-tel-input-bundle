@@ -22,8 +22,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
-            "Swaina\\IntlTelBundle": ""
+            "IntlTelBundle": "src/"
         }
-    },
-    "target-dir": "Swaina/IntlTelBundle"
+    }
 }
