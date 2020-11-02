@@ -1,32 +1,162 @@
 {% block tele_widget %}
     {% spaceless %}
 
-{% stylesheets 'bundles/spikeointltel/css/intlTelInput.css' filter="cssrewrite"  %}
+{% stylesheets 'bundles/swaina/css/intlTelInput.css' filter="cssrewrite"  %}
 <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
 {% endstylesheets %}
 
+    <span style="display: none;">{{ form_widget(form) }}</span>
+    <input type="tel" id="{{ form.vars.id }}_visible" class="form-control" value="{{ form.vars.value and form.vars.value != "+590000000000" ? (form.vars.value matches '/^\\+59/' ? "0" ~ form.vars.value|slice(4) : form.vars.value) : "" }}" placeholder="">
 
+    <span id="valid-{{form.vars.id}}" class="hide" style="color: green;">✓ Valide</span>
+    <span id="error-{{form.vars.id}}" class="hide error" style="color: red;">Numéro non valide</span>
+    <div class="clear"></div>
 
-  {{ form_widget(form,{'type':'tel'}) }}
-
-    {% javascripts 'bundles/spikeointltel/js/intlTelInput.min.js' %}
+    {% javascripts 'bundles/swaina/js/intlTelInput.min.js' %}
         <script src="{{ asset_url }}" type="text/javascript"></script>
-   {% endjavascripts %}
+    {% endjavascripts %}
+
+    <script type="text/javascript" >
+        var telInput{{form.vars.id}} = $("#{{form.vars.id}}"),
+            telInput{{form.vars.id}}_visible = $("#{{form.vars.id}}_visible"),
+            errorMsg{{form.vars.id}} = $("#error-{{form.vars.id}}"),
+            validMsg{{form.vars.id}} = $("#valid-{{form.vars.id}}");
+
+        var reset{{form.vars.id}} = function() {
+            telInput{{form.vars.id}}.removeClass("error");
+            errorMsg{{form.vars.id}}.addClass("hide");
+            validMsg{{form.vars.id}}.addClass("hide");
+        };
+
+        var formatNumber = function(number, fr){
+            // remove all non numeric characters
+            number = number.replace(/\D/g, '');
+            // remove first 0
+            number = number.substr(1);
+
+            if(typeof fr === "undefined" || !fr){
+                // add prefix
+                number = "+59"+number.substr(2,1)+number;
+            }else{
+                number = "+33"+number;
+            }
+
+            return number;
+        };
+
+        var validate{{form.vars.id}} = function() {
+
+            // remove error div
+            reset{{form.vars.id}}();
+
+            // get visible number
+            var number = telInput{{form.vars.id}}_visible.val();
+            if(number == "0000000000")
+            {
+                telInput{{form.vars.id}}_visible.val("");
+                number = "";
+            }
 
 
-<script type="text/javascript" >
-    $(document).ready(function() {
-        $("#{{form.vars.id}}").intlTelInput();
+            if(number) {
+
+                console.log("validate tel - " + number);
+
+                var isValid = false;
+                if (number.charAt(0) == 0) {
+                    // format number
+                    var formattedNumber = formatNumber(number);
+
+                    // update hidden field value
+                    telInput{{ form.vars.id }}.val(formattedNumber);
+
+                    console.log("formatted tel - " + telInput{{ form.vars.id }}.val());
+
+                    isValid = telInput{{ form.vars.id }}.intlTelInput("isValidNumber");
+                    if (!isValid) {
+                        // format fr number
+                        var formattedFrNumber = formatNumber(number, true);
+                        // update hidden field value
+                        telInput{{ form.vars.id }}.val(formattedFrNumber);
+
+                        console.log("formatted fr tel - " + telInput{{ form.vars.id }}.val());
+
+                        isValid = telInput{{ form.vars.id }}.intlTelInput("isValidNumber");
+                    }
+                }
+            }
+            else {
+                isValid = false;
+            }
+
+console.log("is Valid " + isValid);
+            if($(".phone").hasClass("manuel") && !number )
+            {
+                isValid = true;
+            }
+
+            if (isValid) {
+                validMsg{{ form.vars.id }}.removeClass("hide");
+                console.log("valid");
+                return true;
+            } else {
+                console.log("invalid");
+                telInput{{ form.vars.id }}.addClass("error");
+                errorMsg{{ form.vars.id }}.removeClass("hide");
+                $(".btn-submit").attr("disabled","disabled");
+                return false;
+            }
 
 
-        {%if form.vars.attr.user_country is defined %}
-        $("#{{form.vars.id}}").intlTelInput("selectCountry", "{{form.vars.attr.user_country}}");
+            if(!telInput{{form.vars.id}}.prop('required')){
+                telInput{{form.vars.id}}.val("");
+                validMsg{{ form.vars.id }}.removeClass("hide");
+                return true;
+            }
 
-        {%elseif app.session.get('user_country') is not empty %}
-        $("#{{form.vars.id}}").intlTelInput("selectCountry", "{{app.session.get('user_country')}}");
-        {%endif%}
-    });
-</script>
+            return null;
+        };
+
+        var checkDigitsCount{{form.vars.id}} = function(e){
+            var number = telInput{{form.vars.id}}_visible.val();
+            if(number.replace(/\D/g, '').length >= 10){
+                // allow backspace - delete
+                if(e.which == 46 || e.which == 8 ){
+                }else{
+                    return false;
+                }
+            }
+        };
+
+        $(document).ready(function() {
+
+            var params = {};
+
+
+            {#{%if form.vars.attr.countries is defined %}#}
+                {#params['onlyCountries'] = {{ form.vars.attr.countries|raw }};#}
+            {#{%endif%}#}
+
+            {#$.fn.intlTelInput.loadUtils("{{ asset('bundles/swaina/js/utils.js') }}");#}
+
+            telInput{{form.vars.id}}.intlTelInput(params);
+            telInput{{form.vars.id}}.intlTelInput('loadUtils', "{{ asset('bundles/swaina/js/utils.js') }}");
+
+            {%if form.vars.attr.user_country is defined %}
+                telInput{{form.vars.id}}.intlTelInput("selectCountry", "{{form.vars.attr.user_country}}");
+            {%elseif app.session.get('user_country') is not empty %}
+                telInput{{form.vars.id}}.intlTelInput("selectCountry", "{{app.session.get('user_country')}}");
+            {%endif%}
+
+            // on blur: validate
+            telInput{{form.vars.id}}_visible.blur(validate{{form.vars.id}});
+
+            // on keyup / change flag: reset
+            telInput{{form.vars.id}}_visible.on("keypress", checkDigitsCount{{form.vars.id}});
+            telInput{{form.vars.id}}_visible.on("keyup change", reset{{form.vars.id}});
+
+        });
+    </script>
 
     {% endspaceless %}
 {% endblock %}

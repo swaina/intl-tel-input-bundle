@@ -1,29 +1,29 @@
 {
-    "name": "spikeo/intl-tel-input-bundle",
+    "name": "swaina/intl-tel-input-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle integrate International Telephone Input into symfony2 form",
+    "description": "This bundle integrate International Telephone Input into symfony5 form",
     "keywords": ["formtype", "Telephone Input", "symfony", "bundle"],
     "homepage": "https://github.com/SpikeO/intl-tel-input-bundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "SpikeO",
-            "homepage": "https://github.com/SpikeO"
+            "name": "Swaina",
+            "homepage": "https://github.com/swaina"
         },
         {
             "name": "intl-tel-input-bundle",
-            "homepage": "https://github.com/SpikeO/intl-tel-input-bundle"
+            "homepage": "https://github.com/swaina/intl-tel-input-bundle"
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "symfony/framework-bundle": ">=2.3"
+        "php": ">=7.4.0",
+        "symfony/framework-bundle": ">=5.1"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
-            "SpikeO\\IntlTelBundle": ""
+            "swaina\\IntlTelBundle": ""
         }
     },
-    "target-dir": "SpikeO/IntlTelBundle"
+    "target-dir": "swaina/IntlTelBundle"
 }

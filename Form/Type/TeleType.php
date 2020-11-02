@@ -1,13 +1,8 @@
 <?php
 
-/*
- * This file is part of the Webit package.
- *
- * (c) Alaa Kanaan <kanaan278@gmail.com>
- *
- */
 
-namespace SpikeO\IntlTelBundle\Form\Type;
+
+namespace Swaina\IntlTelBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -17,7 +12,6 @@ use Symfony\Component\Validator\Constraints\Regex;
 /**
  * Tele type.
  *
- * @author Alaa Kanaan <kanaan278@gmail.com>
  */
 class TeleType extends AbstractType {
 
