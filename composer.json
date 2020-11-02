@@ -25,5 +25,5 @@
             "Swaina\\IntlTelBundle": ""
         }
     },
-    "target-dir": "src"
+    "target-dir": "Swaina/IntlTelBundle"
 }
