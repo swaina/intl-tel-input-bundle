@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="566ca479-dfd6-41a0-8fce-52b4d68e9027" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Resources/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwainaIntlTelBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/SwainaIntlTelBundle.php" afterDir="false" />
-    </list>
+    <list default="true" id="566ca479-dfd6-41a0-8fce-52b4d68e9027" name="Default" comment="" />
     <ignored path="intl-tel-input-bundle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -286,12 +282,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1412273728706</updated>
-      <workItem from="1604290820990" duration="2094000" />
+      <workItem from="1604290820990" duration="2331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2094000" />
+    <option name="totallyTimeSpent" value="2331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2013" y="131" width="1592" height="927" extended-state="0" />
